@@ -1,0 +1,340 @@
+{
+	"compiler": {
+		"version": "0.8.34+commit.80d5c536"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "Expired",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "got",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "min",
+						"type": "uint256"
+					}
+				],
+				"name": "InsufficientLiquidity",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "got",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "min",
+						"type": "uint256"
+					}
+				],
+				"name": "InsufficientOutput",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "InvalidPath",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "pool",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount0",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount1",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "minLpTokens",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "deadline",
+						"type": "uint256"
+					}
+				],
+				"name": "addLiquidity",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "lpTokens",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address[]",
+						"name": "pools",
+						"type": "address[]"
+					},
+					{
+						"internalType": "address[]",
+						"name": "path",
+						"type": "address[]"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amountIn",
+						"type": "uint256"
+					}
+				],
+				"name": "getAmountsOut",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "amounts",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "pool",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "lpTokens",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "minAmount0",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "minAmount1",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "deadline",
+						"type": "uint256"
+					}
+				],
+				"name": "removeLiquidity",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount0",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount1",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "pool",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "tokenIn",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amountIn",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amountOutMin",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "deadline",
+						"type": "uint256"
+					}
+				],
+				"name": "swapExactTokensForTokens",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "amountOut",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address[]",
+						"name": "pools",
+						"type": "address[]"
+					},
+					{
+						"internalType": "address[]",
+						"name": "path",
+						"type": "address[]"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amountIn",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amountOutMin",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "deadline",
+						"type": "uint256"
+					}
+				],
+				"name": "swapExactTokensForTokensMultiHop",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "amounts",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "Entry-point contract for interacting with ConstantProductAMM pools. The Router adds three capabilities the raw pool doesn't have: 1. **Deadline** — transactions that sit in the mempool too long revert,    protecting users from stale price execution (sandwich / front-running). 2. **Multi-hop swaps** — swap A→B→C in a single transaction by chaining    pools. The router holds no funds; tokens flow pool-to-pool via transferFrom. 3. **Liquidity helpers** — add/remove liquidity with deadline protection and    a minimum LP token guarantee. This mirrors the role of the Uniswap V2 Router02 contract: users never call pools directly — they call the router, which enforces safety invariants.",
+			"kind": "dev",
+			"methods": {
+				"addLiquidity(address,uint256,uint256,uint256,address,uint256)": {
+					"details": "Add liquidity to a pool with a deadline and minimum LP token guarantee."
+				},
+				"getAmountsOut(address[],address[],uint256)": {
+					"details": "Compute the expected output for a multi-hop path without executing.      Useful for UI price display and slippage calculation."
+				},
+				"removeLiquidity(address,uint256,uint256,uint256,address,uint256)": {
+					"details": "Remove liquidity with deadline protection."
+				},
+				"swapExactTokensForTokens(address,address,uint256,uint256,address,uint256)": {
+					"details": "Swap an exact amount of tokenIn for as many tokenOut as possible,      enforcing a minimum output (slippage guard) and a deadline.",
+					"params": {
+						"amountIn": "Exact amount to sell",
+						"amountOutMin": "Minimum output; reverts if pool gives less",
+						"deadline": "Unix timestamp after which the tx reverts",
+						"pool": "The AMM pool to use",
+						"to": "Recipient of the output tokens",
+						"tokenIn": "Token being sold"
+					}
+				},
+				"swapExactTokensForTokensMultiHop(address[],address[],uint256,uint256,address,uint256)": {
+					"details": "Swap through a sequence of pools in a single transaction.      path = [tokenA, tokenB, tokenC]      pools = [poolAB, poolBC] The router pulls tokenA from the sender, swaps A→B in poolAB, then B→C in poolBC, and delivers tokenC to the recipient. Intermediate tokens never leave the router.",
+					"params": {
+						"amountIn": "Amount of path[0] to sell",
+						"amountOutMin": "Minimum amount of path[last] to receive",
+						"deadline": "Expiry timestamp",
+						"path": "Ordered list of token addresses",
+						"pools": "Ordered list of AMM pools (length = path.length - 1)",
+						"to": "Recipient of output tokens"
+					}
+				}
+			},
+			"title": "Router",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Router.sol": "Router"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+			"keccak256": "0x74ed01eb66b923d0d0cfe3be84604ac04b76482a55f9dd655e1ef4d367f95bc2",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5282825a626cfe924e504274b864a652b0023591fa66f06a067b25b51ba9b303",
+				"dweb:/ipfs/QmeCfPykghhMc81VJTrHTC7sF6CRvaA1FXVq2pJhwYp1dV"
+			]
+		},
+		"contracts/Router.sol": {
+			"keccak256": "0xc69d5e83bd7678a0d69995623dd27cfffe6c89e8718f9e86cc0b57b759612d0a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b84b9b26791c81653d023fc61207d09e05c6e69dc0aa0abb0866ee1b145e6cee",
+				"dweb:/ipfs/QmPUbp4v7sFaEvmvoGSpf5H6i8brYBdGAiWJcRR1H17rYk"
+			]
+		}
+	},
+	"version": 1
+}
